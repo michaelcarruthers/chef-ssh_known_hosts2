@@ -52,7 +52,7 @@ end
 def parse_known_hosts(filename)
   keys = { }
 
-  return keys unless File.exist?(filename)
+  return keys unless ::File.exist?(filename)
 
   ::File.read(::File.expand_path(filename)).each_line.with_index do |line, index|
     info, key = line.split(" ", 2)
